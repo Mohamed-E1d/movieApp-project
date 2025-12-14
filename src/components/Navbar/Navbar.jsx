@@ -7,22 +7,23 @@ export default function Navbar() {
       <div className="container">
         {/* Brand */}
         <NavLink className="navbar-brand-custom" to="/">
+        
           <i className="bi bi-play-circle"></i>
           <span className="fs-3">MovieApp</span>
         </NavLink>
 
         {/* Toggle Button */}
-        <button
-          className="navbar-toggler-custom"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          
-        </button>
+       <button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
         {/* Nav Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
