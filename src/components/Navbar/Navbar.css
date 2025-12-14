@@ -1,0 +1,153 @@
+/* Navbar Custom Styles */
+.navbar-custom {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%);
+  color: #fff;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+/* Brand */
+.navbar-brand-custom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff6b6b;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar-brand-custom i {
+  font-size: 28px;
+}
+
+/* Toggler */
+.navbar-toggler-custom {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+}
+
+/* Nav list */
+.navbar-nav-custom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item-custom {
+}
+
+.nav-link-custom {
+  color: #e6e6e6;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.nav-link-custom i {
+  font-size: 18px;
+}
+
+.nav-link-custom:hover {
+  background: rgba(255, 107, 107, 0.08);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.nav-link-custom.active {
+  background:rgb(255, 107, 107);
+  color: #fff;
+  font-weight: 600;
+}
+
+
+
+.nav-signup:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+/* Login */
+.nav-login {
+  border: 1px solid #ffd70026;
+  color: #ffd700 ;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+
+/* Dropdown */
+.dropdown-custom {
+  position: relative;
+}
+
+.dropdown-menu-custom {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 180px;
+  background: rgba(15, 12, 41, 0.98);
+  border-radius: 10px;
+  padding: 8px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all 0.18s ease;
+  z-index: 1100;
+}
+
+.dropdown-custom:hover .dropdown-menu-custom {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item-custom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.dropdown-item-custom:hover {
+  background: rgba(255, 107, 107, 0.06);
+  color: #fff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+  .navbar-nav-custom {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 0;
+  }
+  .dropdown-menu-custom {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+  .dropdown-item-custom {
+    padding-left: 20px;
+  }
+}

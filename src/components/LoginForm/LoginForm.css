@@ -1,0 +1,435 @@
+/* ============ LOGIN WRAPPER ============ */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 107, 107, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 107, 107, 0.03) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+/* ============ LOGIN CONTAINER ============ */
+.login-container {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 60px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* ============ BRANDING SECTION ============ */
+.login-branding {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #fff;
+}
+
+.brand-logo {
+  font-size: 72px;
+  color: #ff6b6b;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.brand-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0;
+  color: #fff;
+}
+
+.brand-subtitle {
+  font-size: 18px;
+  color: #b0b0b0;
+  margin: 0;
+  font-weight: 300;
+}
+
+.brand-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #e0e0e0;
+}
+
+.feature-item i {
+  font-size: 20px;
+  color: #ff6b6b;
+}
+
+/* ============ FORM WRAPPER ============ */
+.login-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-header {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.form-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.form-header p {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+/* ============ FORM STYLES ============ */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon-prefix {
+  position: absolute;
+  left: 16px;
+  font-size: 16px;
+  color: #ff6b6b;
+  pointer-events: none;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 16px 14px 45px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+/* ============ FORM OPTIONS ============ */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0 10px 0;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #ff6b6b;
+}
+
+.checkbox-label {
+  font-size: 13px;
+  color: #b0b0b0;
+  cursor: pointer;
+}
+
+.forgot-password {
+  font-size: 13px;
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #ff8787;
+  text-decoration: underline;
+}
+
+/* ============ SUBMIT BUTTON ============ */
+.btn-login {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(135deg, #ff8787 0%, #f06d7a 100%);
+}
+
+.btn-login:active {
+  transform: translateY(0);
+}
+
+.btn-login i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.btn-login:hover i {
+  transform: translateX(4px);
+}
+
+/* ============ FORM FOOTER ============ */
+.form-footer {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+.signup-link {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+  color: #ff8787;
+  text-decoration: underline;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 968px) {
+  .login-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .login-branding {
+    text-align: center;
+  }
+
+  .brand-title {
+    font-size: 36px;
+  }
+
+  .brand-features {
+    align-items: center;
+  }
+
+  .form-header h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-wrapper {
+    padding: 20px;
+  }
+
+  .login-content {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .brand-logo {
+    font-size: 56px;
+  }
+
+  .brand-title {
+    font-size: 28px;
+  }
+
+  .brand-subtitle {
+    font-size: 16px;
+  }
+
+  .feature-item {
+    font-size: 14px;
+  }
+
+  .form-header h2 {
+    font-size: 24px;
+  }
+
+  .form-input {
+    padding: 12px 14px 12px 40px;
+    font-size: 13px;
+  }
+
+  .btn-login {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .form-options {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 15px;
+  }
+
+  .login-content {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  .brand-logo {
+    font-size: 48px;
+  }
+
+  .brand-title {
+    font-size: 24px;
+  }
+
+  .brand-subtitle {
+    font-size: 14px;
+  }
+
+  .brand-features {
+    gap: 12px;
+  }
+
+  .feature-item {
+    font-size: 13px;
+  }
+
+  .form-header h2 {
+    font-size: 20px;
+  }
+
+  .form-header p {
+    font-size: 13px;
+  }
+
+  .form-label {
+    font-size: 12px;
+  }
+
+  .icon-prefix {
+    left: 12px;
+    font-size: 14px;
+  }
+
+  .form-input {
+    padding: 10px 12px 10px 38px;
+    font-size: 12px;
+  }
+
+  .checkbox-label {
+    font-size: 12px;
+  }
+
+  .btn-login {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .form-footer p {
+    font-size: 12px;
+  }
+}
