@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "./MovieCard.css";
+import "./movieCard.css";
 
 export default function MovieCard({ movieDetails }) {
   const {
